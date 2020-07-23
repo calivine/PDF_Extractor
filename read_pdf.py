@@ -4,7 +4,10 @@ import PyPDF2
 # file = 'BethlehemNH_adf6da59-ca6f-4178-8ddd-33561ef17665.pdf'
 system_name = platform.system()
 
-thisdir = os.listdir('.')
+if system_name == 'Darwin':
+    thisdir = os.listdir('.')
+else:
+    thisdir = os.listdir()
 # print(thisdir)
 JUNK = frozenset({
     'Parcel Information',
