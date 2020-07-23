@@ -54,6 +54,8 @@ for file in thisdir:
             for index, l in enumerate(lines, start=1):
                 line = l.strip()
 
+                # Check if line is current date in the form: mm/dd/yyyy
+
                 # Get rid of Junk
                 if ( l.isspace() or line in JUNK ):
                     continue
